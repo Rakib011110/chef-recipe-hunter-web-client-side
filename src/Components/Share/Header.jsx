@@ -28,10 +28,10 @@ const Header = () => {
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <a>HOME </a>
+                <Link>HOME </Link>
               </li>
               <li tabIndex={0}>
-                <a className="justify-between">
+                <Link className="justify-between">
                   BLOG
                   <svg
                     className="fill-current"
@@ -42,34 +42,34 @@ const Header = () => {
                   >
                     <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
                   </svg>
-                </a>
+                </Link>
                 <ul className="p-2">
                   <li>
-                    <a>Submenu 1</a>
+                    <Link>Submenu 1</Link>
                   </li>
                   <li>
-                    <a>Submenu 2</a>
+                    <Link>Submenu 2</Link>
                   </li>
                 </ul>
               </li>
               <li>
-                <a>Item 3</a>
+                <Link>Item 3</Link>
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost normal-case text-xl font-extrabold ">
+          <Link className="btn btn-ghost normal-case text-xl font-extrabold ">
             {" "}
             <span className="text-green-400"> FOOD</span>{" "}
             <span className="text-red-500"> BOOK</span>
-          </a>
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <a>Item 1</a>
+              <Link>Item 1</Link>
             </li>
             <li tabIndex={0}>
-              <a>
+              <Link>
                 BLOG
                 <svg
                   className="fill-current"
@@ -80,20 +80,20 @@ const Header = () => {
                 >
                   <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
                 </svg>
-              </a>
+              </Link>
             </li>
             <li>
-              <a>Item 3</a>
+              <Link>Item 3</Link>
             </li>
           </ul>
         </div>
 
         <div className="navbar-end">
-          <a className="btn btn-sm bg-blue-600 mx-3"> Log Out </a>
-          <a className="btn btn-sm bg-blue-600">
+          <Link className="btn btn-sm bg-blue-600 mx-3"> Log Out </Link>
+          <Link className="btn btn-sm bg-blue-600">
             {" "}
             <Link to="/login">Login</Link>{" "}
-          </a>
+          </Link>
         </div>
       </div>
     </div>
