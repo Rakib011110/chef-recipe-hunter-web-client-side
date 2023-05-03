@@ -53,7 +53,7 @@ const Chef = ({ chef }) => {
                 <p className="text-red-500 font-bold">Likes {likes} </p>
                 <p className="text-red-500 font-bold">Recipes {num_recipes} </p>
               </div>
-              <button className="bg-green-600 text-white  px-4 rounded hover:bg-red-600">
+              <button className="bg-blue-600 text-white  px-4 rounded hover:bg-red-600">
                 {" "}
                 <Link to={`/chef/${_id}`}> View Details </Link>
               </button>

@@ -34,7 +34,7 @@ const RecepeCategory = () => {
       <div>
         <div className="mt-24 text-center ">
           {" "}
-          <h3 className="text-4xl text-blue-600 font-bold">
+          <h3 className="text-4xl text-red-600 font-bold">
             Recipe Category List
           </h3>
           <p className="mt-4 text-gray-500">
@@ -55,7 +55,7 @@ const RecepeCategory = () => {
                     style={{ height: "200px", width: "200px" }}
                   ></Player>
 
-                  <h5 className="mb-1 text-xl font-medium   text-blue-500">
+                  <h5 className="mb-1 text-xl font-medium   text-red-500">
                     {d.name}
                   </h5>
                   <span className="text-sm text-gray-500 dark:text-gray-400">

@@ -68,7 +68,7 @@ const HomeBanner = () => {
             </p>
             <a
               href="#"
-              className="bg-green-600 text-white py-2 px-4 rounded hover:bg-red-600"
+              className="bg-blue-600 text-white py-2 px-4 rounded hover:bg-red-600"
             >
               Learn More
             </a>

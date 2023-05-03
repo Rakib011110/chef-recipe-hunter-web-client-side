@@ -26,11 +26,13 @@ const ChefRecipies = () => {
 
             <div className="relative flex h-full transform items-end border-2 border-black bg-white transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2">
               <div className="p-4 !pt-0 mx-auto transition-opacity group-hover:absolute group-hover:opacity-0 sm:p-6 lg:p-8">
-                <img
-                  src={chefPicture}
-                  alt="Your Image"
-                  className="w-full h-96 md:h-96 md:object-cover"
-                />
+                <Player
+                  className=" rounded-lg  sm:w-[600px] sm:h-[400px]"
+                  autoplay
+                  loop
+                  src="https://assets9.lottiefiles.com/packages/lf20_ihkjwhbc.json"
+                  // style={{ height: "500px", width: "700px" }}
+                ></Player>
               </div>
               {/* --------- */}
               <div className="absolute p-4 opacity-0 transition-opacity group-hover:relative group-hover:opacity-100 sm:p-6 lg:p-8">
@@ -56,13 +58,11 @@ const ChefRecipies = () => {
         <div className="md:w-1/2 mx-auto p-8">
           <div className="avatar">
             <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-              <Player
-                className=" rounded-lg  "
-                autoplay
-                loop
-                src="https://assets6.lottiefiles.com/packages/lf20_tll0j4bb.json"
-                // style={{ height: "500px", width: "700px" }}
-              ></Player>
+              <img
+                src={chefPicture}
+                alt="Your Image"
+                className="w-full h-96 md:h-96 md:object-cover"
+              />
             </div>
           </div>
           <h2 className="text-3xl font-bold mb-4">
@@ -70,7 +70,7 @@ const ChefRecipies = () => {
             <span className="text-sm">Like {likes} +</span>{" "}
           </h2>
           <p className="text-xl mb-8">{short_bio}</p>
-          <button className="px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-600">
+          <button className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-red-600">
             Call to Action
           </button>
         </div>

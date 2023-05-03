@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -27,11 +28,11 @@ const Header = () => {
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <a>Item 1</a>
+                <a>HOME </a>
               </li>
               <li tabIndex={0}>
                 <a className="justify-between">
-                  Parent
+                  BLOG
                   <svg
                     className="fill-current"
                     xmlns="http://www.w3.org/2000/svg"
@@ -69,7 +70,7 @@ const Header = () => {
             </li>
             <li tabIndex={0}>
               <a>
-                Parent
+                BLOG
                 <svg
                   className="fill-current"
                   xmlns="http://www.w3.org/2000/svg"
@@ -80,22 +81,19 @@ const Header = () => {
                   <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
                 </svg>
               </a>
-              <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
             </li>
             <li>
               <a>Item 3</a>
             </li>
           </ul>
         </div>
+
         <div className="navbar-end">
-          <a className="btn">Get started</a>
+          <a className="btn btn-sm bg-blue-600 mx-3"> Log Out </a>
+          <a className="btn btn-sm bg-blue-600">
+            {" "}
+            <Link to="/login">Login</Link>{" "}
+          </a>
         </div>
       </div>
     </div>
