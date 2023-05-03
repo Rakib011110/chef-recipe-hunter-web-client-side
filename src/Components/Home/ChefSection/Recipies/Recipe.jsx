@@ -8,7 +8,7 @@ const Recipe = ({ recipe }) => {
 
       <div className="mt-10">
         <div className="card card-side bg-base-100 shadow-xl">
-          <figure className="w-5/12">
+          <figure className="w-4/12 h-96">
             <img src={recipe.picture} alt="Movie" />
           </figure>
           <div className="card-body">

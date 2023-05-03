@@ -16,7 +16,7 @@ const Chef = ({ chef }) => {
   return (
     <div>
       <div className="">
-        <a href="#" className="group relative block bg-black ">
+        <div className="group relative block bg-black ">
           <img
             alt="Developer"
             src={chefPicture}
@@ -26,7 +26,6 @@ const Chef = ({ chef }) => {
             <div>
               <p className="text-sm font-medium uppercase tracking-widest text-pink-500 p-4 sm:p-16 lg:p-20  ">
                 {" "}
-                {/* {chefName} */}
               </p>
 
               <p className="text-xl mt-40 sm:mt-40 lg:mt-40 font-bold text-white sm:text-1xl">
@@ -44,7 +43,7 @@ const Chef = ({ chef }) => {
               </div>
             </div>
           </div>
-        </a>
+        </div>
 
         <div>
           <div className="card h-32  shadow-md ">

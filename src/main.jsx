@@ -11,6 +11,8 @@ import Chefs from "./Components/Home/ChefSection/Chefs.jsx";
 import Login from "./Components/Share/Login.jsx";
 import Register from "./Components/Share/Register.jsx";
 import ChefRecipies from "./Components/Home/ChefSection/Recipies/ChefRecipies.jsx";
+import AuthProvider from "./Provider/AuthProvider.jsx";
+import PrivetRouter from "./PrivetRouter/PrivetRouter.jsx";
 
 const router = createBrowserRouter([
   {
@@ -29,7 +31,11 @@ const router = createBrowserRouter([
 
       {
         path: "/chef/:id",
-        element: <ChefRecipies />,
+        element: (
+          <PrivetRouter>
+            <ChefRecipies />{" "}
+          </PrivetRouter>
+        ),
         loader: ({ params }) =>
           fetch(`http://localhost:5000/chefs/${params.id}`),
       },
@@ -48,6 +54,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>
 );
