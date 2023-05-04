@@ -56,8 +56,8 @@ const About = () => {
           <span className="text-1xl font-extrabold mb-10"></span>{" "}
           <p className="text-blue-600 mt-2 mb-4 font-bold"> </p>
           <p className="text-xl mb-8">
-            ood, substance consisting essentially of protein, carbohydrate, fat,
-            and other nutrients used in the body of an organism to sustain
+            Food, substance consisting essentially of protein, carbohydrate,
+            fat, and other nutrients used in the body of an organism to sustain
             growth and vital processes and to furnish energy. The absorption and
             utilization of food by the body is fundamental to nutrition and is
             facilitated by

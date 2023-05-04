@@ -31,7 +31,7 @@ const Blog = () => {
     {
       id: 4,
       question: "What is a custom hook, and why will you create a custom hook?",
-      ans: "",
+      ans: "A custom hook is a reusable function in React that encapsulates common logic used in multiple components. Custom hooks allow you to abstract complex logic into a reusable function, which can then be used across multiple components Custom hooks are used to avoid code duplication, improve code organization, and make code more readable and maintainable. They also provide a way to share stateful logic between components without relying on higher-order components, render props, or other patterns.You might create a custom hook when you find yourself writing similar code across multiple components. For example, if you are writing a lot of code to handle form validation or making API calls, you can create a custom hook to encapsulate that logic and reuse it across multiple components Creating a custom hook also allows you to abstract away the implementation details of how the logic is implemented, allowing you to focus on the higher-level behavior of your component. By creating a clear separation of concerns, you can make your code more modular and easier to test.",
     },
   ];
 
