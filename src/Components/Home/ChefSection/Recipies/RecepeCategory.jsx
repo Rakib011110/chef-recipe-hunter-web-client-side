@@ -38,7 +38,7 @@ const RecepeCategory = () => {
           <p className="mt-4 font-bold text-gray-500">
             food, substance consisting essentially of protein, carbohydrate,
             fat, and other nutrients used in the body of an organism to sustain
-            growth and vital processes and to furnish energy
+            growth and vital processes and to furnish
           </p>
         </div>
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-20 gap-10">
