@@ -1,8 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FaHeart } from "react-icons/fa";
+import LazyLoad from "react-lazy-load";
 
 const Chef = ({ chef }) => {
-  console.log(chef);
+  // console.log(chef);
   const {
     chefName,
     chef_picture,
@@ -17,11 +19,14 @@ const Chef = ({ chef }) => {
     <div>
       <div className="">
         <div className="group relative block bg-black ">
-          <img
-            alt="Developer"
-            src={chefPicture}
-            className="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50"
-          />
+          <LazyLoad threshold={0.95}>
+            <img
+              alt="Developer"
+              src={chefPicture}
+              className="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50"
+            />
+          </LazyLoad>
+
           <div className="relative  ">
             <div>
               <p className="text-sm font-medium uppercase tracking-widest text-pink-500 p-4 sm:p-16 lg:p-20  ">
@@ -49,8 +54,13 @@ const Chef = ({ chef }) => {
           <div className="card h-32  shadow-md ">
             <div className="flex justify-between  ">
               <div className="  ">
-                <p className="text-red-500 font-bold">Likes {likes} </p>
-                <p className="text-red-500 font-bold">Recipes {num_recipes} </p>
+                <p className="text-red-500 font-bold flex ">
+                  <FaHeart className="mx-2 mt-1" /> {likes}+
+                </p>
+                <p className="text-red-500 font-bold">
+                  {" "}
+                  Recipe {num_recipes}+{" "}
+                </p>
               </div>
               <button className="bg-blue-600 text-white  px-4 rounded hover:bg-red-600">
                 {" "}

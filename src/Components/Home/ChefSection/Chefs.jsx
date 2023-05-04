@@ -3,7 +3,7 @@ import Chef from "./Chef";
 
 const Chefs = () => {
   const [chefs, setChef] = useState();
-  console.log(chefs);
+  // console.log(chefs);
 
   useEffect(() => {
     fetch("http://localhost:5000/chefs")

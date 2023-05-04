@@ -6,7 +6,11 @@ const PrivetRouter = ({ children }) => {
   const { user, loading } = useContext(AuthContext);
 
   if (loading) {
-    return <>loading................. </>;
+    return (
+      <>
+        <progress className="progress w-72"></progress>
+      </>
+    );
   }
   const location = useLocation();
 

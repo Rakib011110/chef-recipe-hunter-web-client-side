@@ -7,7 +7,7 @@ const RecepeCategory = () => {
       id: 1,
       img: "https://assets2.lottiefiles.com/packages/lf20_jmejybvu.json",
       name: "Delivery Food",
-      available: "300 Food Available",
+      available: "50+ Delivary Man Available",
     },
     {
       id: 2,
@@ -34,12 +34,11 @@ const RecepeCategory = () => {
       <div>
         <div className="mt-24 text-center ">
           {" "}
-          <h3 className="text-4xl text-red-600 font-bold">
-            Recipe Category List
-          </h3>
-          <p className="mt-4 text-gray-500">
-            Explore thousands of job opportunities with all the information you
-            need. Its your future
+          <h3 className="text-4xl text-red-600 font-bold">OUR SERVICE</h3>
+          <p className="mt-4 font-bold text-gray-500">
+            food, substance consisting essentially of protein, carbohydrate,
+            fat, and other nutrients used in the body of an organism to sustain
+            growth and vital processes and to furnish energy
           </p>
         </div>
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-20 gap-10">

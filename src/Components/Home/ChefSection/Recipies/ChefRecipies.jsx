@@ -1,11 +1,12 @@
 import { Player } from "@lottiefiles/react-lottie-player";
-import React from "react";
+import React, { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import Recipe from "./Recipe";
 import RecepeCategory from "./RecepeCategory";
 
 const ChefRecipies = () => {
   const chefs = useLoaderData();
+
   //   console.log(chefs.recipes);
   const {
     chefName,
@@ -17,6 +18,7 @@ const ChefRecipies = () => {
     chefPicture,
     _id,
   } = chefs;
+
   return (
     <div className="container mx-auto ">
       <div className="flex flex-col  md:flex-row bg-gray-100">
@@ -67,11 +69,17 @@ const ChefRecipies = () => {
           </div>
           <h2 className="text-3xl font-bold mb-4">
             {chefName} <br />
-            <span className="text-sm">Like {likes} +</span>{" "}
           </h2>
+          <span className="text-1xl font-extrabold mb-10">
+            ❤ Like {likes} +
+          </span>{" "}
+          <p className="text-blue-600 mt-2 mb-4 font-bold">
+            {" "}
+            🍕 recepies {num_recipes}{" "}
+          </p>
           <p className="text-xl mb-8">{short_bio}</p>
           <button className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-red-600">
-            Call to Action
+            FAVOURITE
           </button>
         </div>
       </div>
@@ -81,10 +89,9 @@ const ChefRecipies = () => {
       </div>
 
       {/*  recepes */}
-      <h1> Here is recipe</h1>
 
-      {chefs.recipes.map((recipe) => (
-        <Recipe recipe={recipe} key={recipe._id}></Recipe>
+      {chefs.recipes.map((recipe, i) => (
+        <Recipe recipe={recipe} i={i} key={recipe._id}></Recipe>
       ))}
     </div>
   );

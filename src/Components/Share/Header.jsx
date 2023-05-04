@@ -1,10 +1,10 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
-  console.log(user);
+  const [activeNav, setActiveNav] = useState("");
 
   const handleLogOut = () => {
     logOut().then().catch();
@@ -36,10 +36,24 @@ const Header = () => {
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <Link to="/">HOME </Link>
+                <Link
+                  onClick={() => setActiveNav("/")}
+                  className={
+                    activeNav === "/" ? "font-bold  text-primary" : "font-bold"
+                  }
+                >
+                  HOME{" "}
+                </Link>
               </li>
               <li tabIndex={0}>
-                <Link className="justify-between">
+                <Link
+                  onClick={() => setActiveNav("/blog")}
+                  className={
+                    activeNav === "/blog"
+                      ? "font-bold  text-primary"
+                      : "font-bold justify-between "
+                  }
+                >
                   BLOG
                   <svg
                     className="fill-current"
@@ -67,17 +81,32 @@ const Header = () => {
           </div>
           <Link className="btn btn-ghost normal-case text-xl font-extrabold ">
             {" "}
-            <span className="text-green-400"> FOOD</span>{" "}
+            <span className="text-indigo-600"> FOOD</span>{" "}
             <span className="text-red-500"> BOOK</span>
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <Link to="/">HOME </Link>
+              <Link
+                onClick={() => setActiveNav("/")}
+                className={
+                  activeNav === "/" ? "font-bold  text-primary" : "font-bold"
+                }
+              >
+                HOME{" "}
+              </Link>
             </li>
             <li tabIndex={0}>
-              <Link>
+              <Link
+                to="/blog"
+                onClick={() => setActiveNav("/blog")}
+                className={
+                  activeNav === "/blog"
+                    ? "font-bold  text-primary"
+                    : "font-bold justify-between "
+                }
+              >
                 BLOG
                 <svg
                   className="fill-current"
@@ -94,15 +123,24 @@ const Header = () => {
         </div>
 
         <div className="navbar-end">
-          <p>user {user?.email} </p>
+          {/* <p className="font-bold mx-3"> {user?.email} </p> */}
 
           {user ? (
-            <button
-              className="btn btn-sm bg-blue-600 mx-3"
-              onClick={handleLogOut}
-            >
-              Logout
-            </button>
+            <>
+              <div>
+                <div className="avatar online">
+                  <div className="w-10 rounded-full">
+                    <img src={user?.photoURL} />
+                  </div>
+                </div>
+              </div>
+              <button
+                className="btn btn-sm bg-blue-600 mx-3"
+                onClick={handleLogOut}
+              >
+                Logout
+              </button>
+            </>
           ) : (
             <Link className="btn btn-sm bg-blue-600">
               {" "}

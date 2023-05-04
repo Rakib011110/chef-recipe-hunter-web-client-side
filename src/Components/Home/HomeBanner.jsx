@@ -14,12 +14,12 @@ const HomeBanner = () => {
             />
 
             <div className="relative p-4 sm:p-6 lg:p-8">
-              <p className="text-sm font-medium uppercase tracking-widest text-green-500">
-                BANGALIAN
+              <p className="text-sm font-bold uppercase tracking-widest text-red-700">
+                WELCOME TO
               </p>
 
               <p className="text-xl font-bold text-white sm:text-2xl">
-                FOOD BOOK{" "}
+                <span className="text-red-600">FOOD </span> BOOK{" "}
               </p>
 
               <div className="mt-32 sm:mt-48 lg:mt-64">
@@ -39,9 +39,9 @@ const HomeBanner = () => {
                 // style={{ height: "500px", width: "700px" }}
               ></Player>
               <div>
-                <h1 className="text-2xl font-bold text-green-600">
+                <h1 className="text-2xl font-bold text-red-600">
                   {" "}
-                  Lorem ipsum dolor sit.
+                  CHOOSE YOUR FAVOURITE FOOD
                 </h1>
               </div>
             </div>
@@ -59,8 +59,8 @@ const HomeBanner = () => {
                 // style={{ height: "500px", width: "700px" }}
               ></Player>
             </div>
-            <h2 className="text-4xl font-bold mb-4  text-green-400">
-              Welcome to our website
+            <h2 className="text-4xl font-bold mb-4  text-blue-600">
+              WELCOME TO OUR FOOD WEBSITE
             </h2>
             <p className="text-xl mb-4">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.

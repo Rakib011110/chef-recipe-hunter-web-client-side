@@ -13,6 +13,9 @@ import Register from "./Components/Share/Register.jsx";
 import ChefRecipies from "./Components/Home/ChefSection/Recipies/ChefRecipies.jsx";
 import AuthProvider from "./Provider/AuthProvider.jsx";
 import PrivetRouter from "./PrivetRouter/PrivetRouter.jsx";
+import { ToastContainer } from "react-toastify";
+import Error from "./Components/Error/Error.jsx";
+import Blog from "./Components/Blog/Blog.jsx";
 
 const router = createBrowserRouter([
   {
@@ -26,7 +29,6 @@ const router = createBrowserRouter([
       {
         path: "/chefs",
         element: <Chefs />,
-        // loader: () => fetch("http://localhost:5000/chefs"),
       },
 
       {
@@ -48,6 +50,14 @@ const router = createBrowserRouter([
         path: "/register",
         element: <Register />,
       },
+      {
+        path: "/blog",
+        element: <Blog />,
+      },
+      {
+        path: "*",
+        element: <Error />,
+      },
     ],
   },
 ]);
@@ -56,6 +66,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <AuthProvider>
       <RouterProvider router={router} />
+      <ToastContainer />
     </AuthProvider>
   </React.StrictMode>
 );
