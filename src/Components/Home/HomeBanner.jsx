@@ -66,8 +66,6 @@ const HomeBanner = () => {
               Food is any nutrient-rich material consumed or absorbed by humans,
               animals, or plants in order to sustain life and growth. The major
               sources of food are animals and plants. It is consumed because it
-              provides energy and nourishment and keeps humans and animals
-              healthy.
             </p>
             <a
               href="#"

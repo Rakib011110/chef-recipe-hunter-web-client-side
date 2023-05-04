@@ -2,6 +2,7 @@ import React from "react";
 import HomeBanner from "./HomeBanner";
 import Chefs from "./ChefSection/Chefs";
 import RecepeCategory from "./ChefSection/Recipies/RecepeCategory";
+import About from "../About/About";
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <div className="container mx-auto">
         <RecepeCategory />
         <Chefs></Chefs>
+        <About />
       </div>
     </div>
   );
