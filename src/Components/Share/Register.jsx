@@ -13,6 +13,8 @@ const auth = getAuth(app);
 const Register = () => {
   const { createUser, user, updateUserData, googleSignIn, githulogin } =
     useContext(AuthContext);
+  const [error, setErr] = useState("");
+
   // console.log(createUser);
   const navigate = useNavigate();
   const location = useLocation();
@@ -43,7 +45,7 @@ const Register = () => {
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        console.log(errorMessage);
+        setErr(errorMessage);
         // ..
       });
   };
@@ -196,6 +198,7 @@ const Register = () => {
                   <FaGoogle className="mx-auto h-3.5 w-3.5" />
                 </button>
               </div>
+              <p className="text-danger">{error} </p>
 
               <div class="my-4 flex items-center before:mt-0.5 before:flex-1 before:border-t before:border-neutral-300 after:mt-0.5 after:flex-1 after:border-t after:border-neutral-300">
                 <p class="mx-4 mb-0 text-center font-semibold dark:text-white">
