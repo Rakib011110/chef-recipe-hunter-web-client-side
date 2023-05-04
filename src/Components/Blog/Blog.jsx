@@ -1,6 +1,16 @@
-import React from "react";
+import React, { useRef } from "react";
+import { useReactToPrint } from "react-to-print";
+import { toast } from "react-toastify";
 
 const Blog = () => {
+  const componentRef = useRef();
+
+  const handlePrint = useReactToPrint({
+    content: () => componentRef.current,
+    documentTitle: "emp-data",
+    onAfterPrint: () => toast("success"),
+  });
+
   const questions = [
     {
       id: 1,
@@ -11,12 +21,12 @@ const Blog = () => {
     {
       id: 2,
       question: "How to validate React props using PropTypes ?",
-      ans: "",
+      ans: "To use PropTypes, you need to import it from the 'prop-types' package and then define the expected props and their types using the PropTypes object  For example, let's say you have a component called 'Button' that expects a 'label' prop of type string and a 'onClick' prop of type function ",
     },
     {
       id: 3,
       question: "Tell us the difference between nodejs and express js?",
-      ans: "",
+      ans: "Node.js and Express.js are two different technologies, but they are often used together in web development Node.js is a runtime environment for executing JavaScript code outside of a web browser. It allows developers to write server-side applications using JavaScript, which makes it a popular choice for web development. Node.js provides several built-in modules and APIs for handling I/O operations, networking, file system access, and more Express.js, on the other hand, is a web application framework built on top of Node.js. It provides a set of features and tools that make it easier to build web applications and APIs using Node.js. Express.js includes middleware functions that can be used for tasks such as parsing request data, handling authentication, and serving static files. It also supports routing and template engines for rendering dynamic HTML pages.  In short, Node.js provides the runtime environment for executing JavaScript code, while Express.js provides a framework for building web applications and APIs using Node.js.",
     },
     {
       id: 4,
@@ -26,7 +36,7 @@ const Blog = () => {
   ];
 
   return (
-    <div className="mt-4 grid grid-cols-1 gap-5">
+    <div ref={componentRef} className="mt-4 grid grid-cols-1 gap-5">
       {questions.map((q) => (
         <article class="rounded-xl bg-white p-4 ring ring-indigo-50 sm:p-6 lg:p-8">
           <div class="flex items-start sm:gap-8">
@@ -44,8 +54,11 @@ const Blog = () => {
             </div>
 
             <div>
-              <strong class="rounded border border-indigo-500 bg-indigo-500 px-3 py-1.5 text-[10px] font-medium text-white">
-                Episode #101
+              <strong
+                onClick={handlePrint}
+                class="rounded btn btn-sm border border-indigo-500 bg-indigo-500 px-3 py-1.5 text-[10px] font-medium text-white"
+              >
+                DOWNLOAD PDF
               </strong>
 
               <h3 class=" text-lg font-medium sm:text-xl ">

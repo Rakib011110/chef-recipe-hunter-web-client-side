@@ -6,7 +6,7 @@ const Chefs = () => {
   // console.log(chefs);
 
   useEffect(() => {
-    fetch("http://localhost:5000/chefs")
+    fetch("https://chef-recipe-hunter-server-psi-six.vercel.app/chefs")
       .then((res) => res.json())
       .then((data) => setChef(data));
   }, []);

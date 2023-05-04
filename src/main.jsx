@@ -38,8 +38,11 @@ const router = createBrowserRouter([
             <ChefRecipies />{" "}
           </PrivetRouter>
         ),
+        // https://chef-recipe-hunter-server-psi-six.vercel.app
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/chefs/${params.id}`),
+          fetch(
+            `https://chef-recipe-hunter-server-psi-six.vercel.app/chefs/${params.id}`
+          ),
       },
 
       {
