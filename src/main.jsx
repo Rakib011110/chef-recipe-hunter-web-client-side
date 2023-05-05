@@ -28,7 +28,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/chefs",
-        element: <Chefs />,
+        element: (
+          <PrivetRouter>
+            <Chefs />{" "}
+          </PrivetRouter>
+        ),
       },
 
       {
@@ -38,7 +42,6 @@ const router = createBrowserRouter([
             <ChefRecipies />{" "}
           </PrivetRouter>
         ),
-        // https://chef-recipe-hunter-server-psi-six.vercel.app
         loader: ({ params }) =>
           fetch(
             `https://chef-recipe-hunter-server-psi-six.vercel.app/chefs/${params.id}`

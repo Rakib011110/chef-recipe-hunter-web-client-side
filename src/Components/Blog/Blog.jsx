@@ -36,7 +36,10 @@ const Blog = () => {
   ];
 
   return (
-    <div ref={componentRef} className="mt-4 grid grid-cols-1 gap-5">
+    <div
+      ref={componentRef}
+      className="mt-4 grid grid-cols-1 gap-5 container mx-auto"
+    >
       {questions.map((q) => (
         <article class="rounded-xl bg-white p-4 ring ring-indigo-50 sm:p-6 lg:p-8">
           <div class="flex items-start sm:gap-8">
