@@ -5,13 +5,16 @@ const Recipe = ({ recipe }) => {
   const [buttonDisabled, setButtonDisabled] = useState(false);
   const [activeNav, setActiveNav] = useState("");
 
-  console.log(recipe);
+  console.log(recipe);``
 
   const handleClick = () => {
     // Disable the button
     setButtonDisabled(true);
     toast("recipe is your favorite");
   };
+
+
+  
   return (
     <div>
       {/* <h1> {recipe.ingredients[1]}</h1> */}
